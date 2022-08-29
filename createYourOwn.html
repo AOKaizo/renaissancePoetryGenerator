@@ -7,6 +7,7 @@
     <title>Book of Bad Poetry: Renaissance</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="script" href="poetryMaker.js" />
+    <script src="poetryMakerOthers.js"></script>
   </head>
   <body>
     <header class="navBar">
@@ -25,16 +26,24 @@
         src="images/papyrus.jpeg"
         alt="Papery Background"
       />
-      <div id="poems">
-        <div>
-          <h1 id="poemTitle1"></h1>
-          <p id="poemText1"></p>
+      <div id="poemHolders">
+        <div id="poemSubmissionTools">
+          <label for="poemSubmission">Submit your source text: </label>
+          <textarea
+            name="poemSubmission"
+            id="poemSubmission"
+            cols="50"
+            rows="30"
+            placeholder="Choose a poem of high quality that you wish to make less so."
+          ></textarea>
+          <div>
+            <button onclick="setUserPoem()">Submit</button>
+          </div>
         </div>
-        <div>
-          <h1 id="poemTitle2"></h1>
+        <div id="createYourOwnPoemHolder">
+          <h2 id="poemTitle2"></h2>
           <p id="poemText2"></p>
         </div>
-        <script src="poetryMaker.js"></script>
       </div>
     </div>
   </body>

@@ -1,0 +1,154 @@
+body {
+  margin: 0;
+  font-family: "Lucida Handwriting", "Lucida Calligraphy", Cursive;
+}
+
+header {
+  background-color: oldlace;
+}
+
+.navBar {
+  z-index: 2;
+  position: fixed;
+  top: 0px;
+  left: 5em;
+  right: 5em;
+  opacity: 99%;
+  border-bottom-left-radius: 2em;
+  border-bottom-right-radius: 2em;
+  height: 50px;
+  display: flex;
+  column-gap: 15%;
+}
+
+#logo {
+  flex: 0 0 40%;
+  margin-left: 1em;
+  place-self: center;
+  font-family: "Lucida Handwriting", "Lucida Calligraphy", cursive;
+  color: black;
+}
+
+#logo a {
+    text-decoration: none;
+    color: black;
+  }
+
+#navButtons {
+  flex: 0 0 33%;
+  display: flex;
+  place-items: center;
+}
+
+#navButtons a {
+    flex: 0 0 40%;
+    font-family: "Lucida Handwriting", "Lucida Calligraphy", cursive;
+    font-size: x-large;
+  text-decoration: none;
+  color: black;
+}
+
+#navButtons a:hover {
+  text-decoration: underline;
+  color: darkgrey;
+}
+
+#poems {
+  display: flex;
+  z-index: 1;
+  position:relative;
+  top: 6vh;
+  color: black;
+  text-shadow: 1px 1px darkgray;
+  font-size: 3vh;
+  text-align: center;
+  column-gap: 10%;
+  margin-right: 10%;
+  margin-left: 10%;
+}
+
+#aboutText {
+  display: flex;
+  z-index: 1;
+  position:relative;
+  top: 6vh;
+  color: black;
+  text-shadow: 1px 1px darkgray;
+  font-size: 9vh;
+  text-align: center;
+  column-gap: 10%;
+  margin-right: 10%;
+  margin-left: 10%;
+}
+
+#poemText1 {
+  flex: 0 0 50%;
+}
+
+#poemText2 {
+  flex: 0 0 50%;
+}
+#poemTitle1 {
+    margin: 0;
+    font-variant: small-caps;
+    flex-wrap: nowrap;
+  }
+  
+  #poemTitle2 {
+    margin: 0;
+    font-variant: small-caps;
+    flex-wrap: nowrap;
+  }
+.main {
+  margin: 0;
+  padding: 0;
+}
+
+#backgroundImage {
+    top: 0;
+  width: 100%;
+  height: 105vh;
+  position: absolute;
+  z-index: -1;
+}
+
+#poetryMakerCode {
+    display: flex;
+    position: absolute;
+    top: 10vh;
+    left: 10vh;
+    place-self: center;
+    height: 90%;
+    width: 100%;
+    overflow: auto;
+    font-size: 2.5vh;
+    color: black;
+    text-shadow: 2px 2px darkgray;
+}
+
+#poemHolders {
+    display: flex;
+    position: absolute;
+    top: 10vh;
+    left: 10vh;
+    place-self: center;
+    height: 90%;
+    width: 100%;
+    overflow: auto;
+    font-size: 2.5vh;
+    color: black;
+    text-shadow: 2px 2px darkgray;
+    column-gap: 10%;
+}
+
+#poemSubmissionTools {
+    display: flex;
+    flex-direction: column;
+    place-self: center;
+    flex: 0 0 30%;
+}
+#createYourOwnPoemHolder {
+    flex: 0 0 50%;
+    place-self: center;
+    text-align: center;
+}
