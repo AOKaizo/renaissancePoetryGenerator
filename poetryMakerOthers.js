@@ -1,7 +1,8 @@
 function setUserPoem() {
-  let text = document
-    .getElementById("poemSubmission")
-    .value.replace(/[\r\n]/gm, " ");
+  let text = document.getElementById("poemSubmission").value;
+
+  text.replaceAll(/[\r\n]/gm, " ");
+  text.replaceAll(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g, "");
 
   function generateWordPairs(text) {
     let keyValPair = text.toLowerCase().replaceAll(",", "").split(" ");
