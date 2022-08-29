@@ -57,6 +57,8 @@ function setUserPoem() {
           ]
         );
       } else {
+        try {Math.floor(Math.random() * poemChain[prevWord].length);}
+        catch {setUserPoem()}
         const fate = Math.floor(Math.random() * poemChain[prevWord].length);
         nextWord = poemChain[prevWord][fate];
         while (prevWord === nextWord) {
@@ -66,7 +68,7 @@ function setUserPoem() {
           nextWord = poemChain[prevWord][unsealedFate];
         }
         prevWord = nextWord;
-      }
+    }
       poemLine += nextWord;
     }
     return poemLine.trim();
