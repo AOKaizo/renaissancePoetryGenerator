@@ -106,8 +106,8 @@ header {
 
 #backgroundImage {
     top: 0;
-  width: 100%;
-  height: 105vh;
+  width: 210vh;
+  height: 100%;
   position: absolute;
   z-index: -1;
 }
@@ -135,10 +135,11 @@ header {
     height: 90%;
     width: 100%;
     overflow: auto;
-    font-size: 2.5vh;
+    font-size: 3vh;
     color: black;
     text-shadow: 2px 2px darkgray;
     column-gap: 10%;
+
 }
 
 #poemSubmissionTools {
