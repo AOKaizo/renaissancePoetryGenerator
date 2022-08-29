@@ -57,10 +57,10 @@ header {
   display: flex;
   z-index: 1;
   position: relative;
-  top: 6vh;
+  top: 10vh;
   color: black;
   text-shadow: 1px 1px darkgray;
-  font-size: 3vh;
+  font-size: 3.2vh;
   text-align: center;
   column-gap: 5%;
   margin-right: 1%;
@@ -116,7 +116,7 @@ header {
   display: flex;
   position: absolute;
   top: 10vh;
-  left: 10vh;
+  left: 10%;
   place-self: center;
   height: 90%;
   width: 100%;
@@ -138,7 +138,9 @@ header {
   font-size: 3vh;
   color: black;
   text-shadow: 2px 2px darkgray;
-  column-gap: 10%;
+  column-gap: 5%;
+  /* margin-right: 1%; */
+  /* margin-left: 10%; */
 }
 
 #poemSubmissionTools {

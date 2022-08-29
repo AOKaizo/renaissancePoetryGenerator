@@ -1,8 +1,11 @@
 function setUserPoem() {
-  let text = document.getElementById("poemSubmission").value;
-
-  text.replaceAll(/[\r\n]/gm, " ");
-  text.replaceAll(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g, "");
+  let text = document
+    .getElementById("poemSubmission")
+    .value.replaceAll(/[\n\r]/g, " ")
+    .replaceAll(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g, "").replaceAll(/\s{2,}/g, " ");
+  // text.replaceAll(/[\n\r]/g, " ");
+  // text.replaceAll(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g, "");
+  // text.replaceAll(/\s{2,}/g, " ");
 
   function generateWordPairs(text) {
     let keyValPair = text.toLowerCase().replaceAll(",", "").split(" ");
@@ -70,21 +73,21 @@ function setUserPoem() {
   }
 
   function BOOK_OF_BAD_POETRY(
-    corpse,
+    text,
     numLines,
     wordsInLine = Math.floor(Math.random() * 20) || 1
   ) {
-    let corpseChop = generateWordPairs(corpse);
+    let textChop = generateWordPairs(text);
     let poemHolder = ``;
     for (let i = 0; i < numLines; i++) {
       if (i === 0) {
-        poemHolder = writeLine(corpseChop, wordsInLine) + ";";
+        poemHolder = writeLine(textChop, wordsInLine) + ";";
       } else if (i < numLines - 1) {
         poemHolder += `
-        ${writeLine(corpseChop, wordsInLine) + ";"}`;
+          ${writeLine(textChop, wordsInLine) + ";"}`;
       } else {
         poemHolder += `
-      ${writeLine(corpseChop, wordsInLine) + "."}`;
+        ${writeLine(textChop, wordsInLine) + "."}`;
       }
     }
     return poemHolder;
@@ -96,6 +99,6 @@ function setUserPoem() {
   poemTitle2.innerText = BOOK_OF_BAD_POETRY(
     text,
     1,
-    Math.ceil(Math.random() * 3)
+    Math.ceil(Math.random() * 4)
   ).slice(0, -1);
 }
