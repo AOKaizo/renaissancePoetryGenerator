@@ -98,10 +98,10 @@ poem2.innerText = BOOK_OF_BAD_POETRY(text, 14, 10);
 poemTitle1.innerText = BOOK_OF_BAD_POETRY(
   text,
   1,
-  Math.ceil(Math.random() * 4)
+  Math.ceil(Math.random() * 3)
 ).slice(0, -1);
 poemTitle2.innerText = BOOK_OF_BAD_POETRY(
   text,
   1,
-  Math.ceil(Math.random() * 4)
+  Math.ceil(Math.random() * 3)
 ).slice(0, -1);

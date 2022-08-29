@@ -21,6 +21,20 @@ header {
   column-gap: 15%;
 }
 
+.navBarIdx {
+  z-index: 2;
+  position: fixed;
+  top: 0px;
+  left: 5em;
+  right: 5em;
+  opacity: 99%;
+  border-bottom-left-radius: 2em;
+  border-bottom-right-radius: 2em;
+  height: 50px;
+  display: flex;
+  column-gap: 2%;
+}
+
 #logo {
   flex: 0 0 40%;
   margin-left: 1em;
@@ -40,6 +54,12 @@ header {
   place-items: center;
 }
 
+#navButtonsIdx {
+  flex: 0 0 40%;
+  display: flex;
+  place-items: center;
+}
+
 #navButtons a {
   flex: 0 0 40%;
   font-family: "Lucida Handwriting", "Lucida Calligraphy", cursive;
@@ -48,7 +68,20 @@ header {
   color: black;
 }
 
+#navButtonsIdx a {
+  flex: 0 0 35%;
+  font-family: "Lucida Handwriting", "Lucida Calligraphy", cursive;
+  font-size: x-large;
+  text-decoration: none;
+  color: black;
+}
+
 #navButtons a:hover {
+  text-decoration: underline;
+  color: darkgrey;
+}
+
+#navButtonsIdx a:hover {
   text-decoration: underline;
   color: darkgrey;
 }
