@@ -1,12 +1,13 @@
 function setUserPoem() {
+
   let text = document
     .getElementById("poemSubmission")
     .value.replaceAll(/[\n\r]/g, " ")
-    .replaceAll(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g, "").replaceAll(/\s{2,}/g, " ");
+    .replaceAll(/[.,\/#!$%\^&\*;:{}=_~()]/g, "").replaceAll(/\s{2,}/g, " ");
   // text.replaceAll(/[\n\r]/g, " ");
   // text.replaceAll(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g, "");
   // text.replaceAll(/\s{2,}/g, " ");
-
+  $('#createYourOwnPoemHolder').css('border', '5px outset tan');
   function generateWordPairs(text) {
     let keyValPair = text.toLowerCase().replaceAll(",", "").split(" ");
     for (let i = 0; i < keyValPair.length; i++) {
@@ -96,11 +97,23 @@ function setUserPoem() {
   }
   let poem2 = document.querySelector("#poemText2");
   let poemTitle2 = document.querySelector("#poemTitle2");
-
+if (text.length === 0) {
+  poemTitle2.innerText = ''
+  poem2.innerText = `You know... It would help if you gave me something to work with. 
+  A master cannot create without their tools!`
+  $('#poemText2').css('font-size', '6vh');
+} else if (text.length < 20) {
+  poemTitle2.innerText = ''
+  poem2.innerText = `Apologies! Please enter a poem of greater length!
+  Anything over twenty words should do.`
+  $('#poemText2').css('font-size', '6vh');
+} else{
+  $('#poemText2').css('font-size', '3vh');
   poem2.innerText = BOOK_OF_BAD_POETRY(text, 14, 10);
   poemTitle2.innerText = BOOK_OF_BAD_POETRY(
     text,
     1,
     Math.ceil(Math.random() * 4)
   ).slice(0, -1);
+}
 }

@@ -7,12 +7,13 @@
     <title>Book of Bad Poetry: Renaissance</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="script" href="poetryMaker.js" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="poetryMakerOthers.js"></script>
   </head>
   <body>
     <header class="navBar">
       <h1 id="logo">
-        <a href="index.html">Book of Bad Poetry: Renaissance Edition</a>
+        <a href="index.html">Book of Bad Poetry</a>
       </h1>
       <nav id="navButtons">
         <a id="nav-item" href="about.html">What Is It?</a>
@@ -37,7 +38,7 @@
             placeholder="Choose a poem of high quality that you wish to make less so."
           ></textarea>
           <div>
-            <button onclick="setUserPoem()">Submit</button>
+            <button  id="generate-poem-button" onclick="setUserPoem()">Submit</button>
           </div>
         </div>
         <div id="createYourOwnPoemHolder">
